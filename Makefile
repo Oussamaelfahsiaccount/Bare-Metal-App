@@ -14,6 +14,9 @@ all: stm32_startup_v2.o
 stm32_startup_v2.o: stm32_startup_v2.c
 	$(CC) $(CFLAGS) -o $(@) $(^)
 
+clean :
+	rm -rf *.o *.elf
+
 
 
 
