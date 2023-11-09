@@ -1,6 +1,6 @@
 
 #define SRAM_START 0x20000000U
-#define SRAM_SIZE  (128 * 1024 ) // 128 KB
+#define SRAM_SIZE  (192 * 1024 ) // 192 KB
 #define SRAM_END   SRAM_START + SRAM_SIZE
 #define END_STACK SRAM_END 
 

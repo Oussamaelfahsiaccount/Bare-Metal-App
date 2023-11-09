@@ -19,16 +19,21 @@ SECTIONS{
         *(.isr_vector) 
         *(.text)
         *(.ordata)
+        _etext = . ;
     }> FLASH 
 
     .data :
     {
+        _sdata = . ; /* '.' truck the VMA ->_sdata <- address .data(RAM)  */
         *(.data)
+        _edata = . ; 
     }> SRAM AT>FLASH
 
     .bss :
     {
+        _sbss = .;
         *(.bss) 
+        _ebss = .;
     }> SRAM 
 
 
